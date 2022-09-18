@@ -1,0 +1,92 @@
+label {
+  margin: 0.5rem 0;
+}
+
+:focus {
+  outline-offset: .35rem;
+}
+
+.textbox {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 1.5rem;
+  padding: .35rem .6rem;
+  transition: .3s;
+  // margin: 0 .75rem;
+  max-width: 70ch;
+  &:hover {
+  outline-offset: 0;
+  }
+}
+
+.register-form {
+  background-color: hsl(190, 40%, 35%);
+  font-size: 1.5rem;
+  padding: 2rem;
+  width: fit-content;
+  border-radius: 1rem;
+}
+
+.button {
+  background-color: hsl(180, 100%, 50%);
+  max-width: max-content;
+  border-radius: .7rem;
+  padding: .5rem;
+  transition: .2s;
+  &:hover {
+    background-color: hsl(180, 100%, 75%);
+  }
+  &:active {
+    background-color: hsl(180, 100%, 32%);
+  }
+}
+
+.button-primary {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background-color: hsl(180, 100%, 50%);
+  max-width: max-content;
+  border-radius: .7rem;
+  padding: .6rem;
+  transition: .2s;
+  &:hover {
+    background-color: hsl(180, 100%, 75%);
+  }
+  &:active {
+    background-color: hsl(180, 100%, 32%);
+  }
+}
+
+.center {
+  margin-top: .75rem;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0.5rem 1.5rem 0.2rem;
+}
+
+@keyframes pulse {
+  from {outline-width: 1px;}
+  to {outline-width: 100px;}
+}
+
+.required { 
+  display: inline-block;
+  color: hsl(0, 81%, 46%);
+  &:hover::before {
+    content: 'Required';
+    font-size: 1.1rem;
+    text-align: center;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    background-color: hsla(0, 0%, 5%, 0.85);
+    padding: .3rem .7rem .5rem;
+    border-radius: .5rem;
+    transform: translateX(-50%) translateY(-2.5rem);
+  }
+}
