@@ -43,7 +43,20 @@ export interface Post {
   created: string,
   last_edited: string,
   edited: boolean,
+  likes: number,
+  liked_by: string[],
+  disliked_by: string[],
+  type: 'post'
 }
+
+export interface PaginatedRespone<type> {
+  count: number,
+  next: string,
+  previous: string,
+  results: [type]
+}
+
+let swe = {} as PaginatedRespone<Post>
 
 const initialState = { 
   isAuthenticated: false,

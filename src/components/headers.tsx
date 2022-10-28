@@ -21,7 +21,7 @@ function Header(props:any) {
       if (pattern) {
       setLoading(true);
       axios
-        .get(`http://localhost:8000/accounts/all/${pattern}`)
+        .get(`http://localhost:8000/accounts/search/?pattern_username=${pattern}`)
         .then((res:any) => setUserList(res.data))
         .catch((err:any) => {console.log(err.code); setServerDown(true)})
         .finally(() => setLoading(false))
@@ -51,7 +51,7 @@ function Header(props:any) {
               !loading ? (userList.map((user: User) => {
                 return (
                 <div key={user.static_user_id}>
-                  <a href={`http://localhost:3000/user/${user.static_user_id}`}>
+                  <a href={`/user/${user.static_user_id}`}>
                    {user.username}
                   </a>
                 </div>

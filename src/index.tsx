@@ -23,7 +23,7 @@ export default function Page() {
 
   useLayoutEffect(() => {
     dispatch(checkVerification() as any)
-    console.log(document.cookie)
+    // console.log(document.cookie)
   },[]);
 
   return (
